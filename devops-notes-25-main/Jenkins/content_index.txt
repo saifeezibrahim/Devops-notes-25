@@ -1,0 +1,49 @@
+Content Index
+Jenkins
+1_Jenkins_intro.md
+
+●	Jenkins Overview
+●	How to Install Jenkins on Windows
+●	Configuring Jenkins on Windows
+●	How to Start/Stop or restart Jenkins on Windows
+
+2_Jenkin_plugins.md
+
+●	Jenkins Plugins
+●	Plugin Installation
+●	User Management in Jenkins
+●	Authorization Strategies
+●	Jenkins Jobs/Projects
+	○ overview Jobs/Projects
+	○ Freestyle Job/Project
+● 	Configuring Tools in Jenkins
+
+3_Jenkins_intro_2.md
+
+●	Jenkins Folder Structure
+●	What If a Jenkins User Forgets Their Password?
+●	What If a Jenkins Admin Forgets Their Password?
+●	Ways to Trigger Jobs
+● 	How to Change the Default Port Number of Jenkins
+
+
+4_basic_pipeline.md
+
+●	Pipeline Projects Overview
+	○ Why To Use Pipeline Projects?
+	○ Creating a Simple "Hello World" Pipeline Job
+●	Rebuild vs. Replay
+●	Using the Snippet Generator in Jenkins Pipeline
+●	Pipeline Execution Mode
+●	Using Environment Variables in Jenkins Pipeline
+●	How to Parameterize a Jenkins Job
+
+5_Jenkin_ssh_pat.md
+
+●	How to clone git private repo with SSH keys  and PAT in job/pipeline  
+●	Personal access tokens (PAT) configuration and usage
+● 	Jenkins Shared Libraries
+
+6_jenkins_webhooks_backup.md
+● 	Using GitHub Webhook Actions in Jenkins
+● 	Backup/ Migartion of jenkin Jobs

@@ -1,0 +1,125 @@
+## **Jenkins Plugins**
+Jenkins plugins are extensions that enhance Jenkins' functionality.
+
+### **Plugin Installation (in GUI)**
+There are two ways to install plugins in GUI:
+
+#### **1. Automatic Installation (.jpi - Jenkins Plugins)**
+- Login to Jenkins GUI.
+- Go to **Dashboard → Manage Jenkins → Plugins**.
+- Select **Available Plugins**.
+- Search for the required plugin.
+- Select the checkbox → Click **Install**.
+- Tick the checkbox to **Restart Jenkins**.
+
+#### **2. Manual Installation (.hpi - Hudson Plugins)**
+- Download plugins from:
+  In Two ways we can download
+  - [Official Jenkins Plugins](https://plugins.jenkins.io/)
+  - **Jenkins GUI → Available Plugins**
+- Choose the required version and download.
+- Upload the `.hpi` file manually in Jenkins:
+  - **Dashboard → Manage Jenkins → Plugins → Advanced Settings → Upload Plugin → Deploy**.
+- Check the **Deployment Progress** and restart if needed.
+
+### **Uninstall Plugins**
+- **Dashboard → Manage Jenkins → Plugins**.
+- Select the **(X)** option next to the plugin.
+- Click **YES** to confirm.
+
+### **Update Plugins**
+- **Dashboard → Manage Jenkins → Plugins → Updates**.
+- Tick the checkboxes for plugins to update.
+- Click **Update** (next to the search box).
+- Restart Jenkins after updating.
+
+**⚠️ Note:** In real-time environments, avoid direct updates. First, test updates in a local setup before deploying them to production.
+
+---
+
+## **User Management in Jenkins**
+### **Create Users**
+- **Dashboard → Manage Jenkins → Users**.
+- Click **+ Create User**.
+- Enter **Name, Password, Email**.
+- Click **Create User**.
+
+### **Assign Permissions**
+- **Dashboard → Manage Jenkins → Security**.
+- Define access control in the **Authorization** section.
+- Choose **Matrix-based Security**.
+- Click **Add User** → Enter **User ID**.
+- Assign necessary permissions (minimum: **Overall Read**).
+
+**User Storage Options:**
+- **Jenkins’ Own User Database** – Suitable for small teams.
+- **LDAP (Lightweight Directory Access Protocol)** – For enterprise-level authentication.
+
+---
+
+## **Authorization Strategies**
+1. **Project-based Matrix Authorization Strategy**
+   - Assign role-based access control (**RBAC**) based on credentials, overall access, agent, etc.
+   
+2. **Matrix Authorization Strategy**
+   - Configure fine-grained permissions, like starting builds, configuring items, and deleting jobs.
+
+---
+
+## **Jenkins Jobs/Projects**
+A **Job/Project** in Jenkins consists of tasks like building, testing, and deploying code.
+
+### **Types of Jenkins Projects**
+- **Maven Project** – Automates builds using POM files.
+- **Pipeline** – Manages workflows across multiple build agents.
+- **Multi-configuration Project** – Supports multiple environments/configurations.
+- **Folder** – Groups items under separate namespaces.
+- **Multibranch Pipeline** – Creates pipelines for each SCM branch.
+- **Organization Folder** – Scans repositories to create multibranch subfolders.
+
+---
+
+## **overview Job/Project**
+### **Steps:**
+1. **Dashboard → New Item → Enter Job Name**.
+2. Select an item type (**e.g., Freestyle Project**) → Click **OK**.
+3. Configure the job:
+   - **General** – Add project description.
+   - **Source Code Management** – Add repository URLs.
+   - **Build Triggers** – Define automated build conditions.
+   - **Build Environment** – Set up pre-build configurations.
+   - **Build Steps** – Define tasks like compiling and testing.
+   - **Post-Build Actions** – Add actions like artifact archiving or notifications.
+4. Click **Save**.
+
+---
+
+## **Freestyle Job/Project**
+1. **Dashboard → New Item → Enter Job Name**.
+2. Select **Freestyle Project** → Click **OK**.
+3. In the configuration, go to **Build Steps** → Click **Add Build Step**.
+4. Select **Execute Windows Batch Command**.
+5. Type `dir` → Click **Save**.
+6. Go to **Dashboard**, select the job.
+7. Click **Build Now**.
+8. Check job status and output.
+
+--
+Here’s a structured version of your notes using bullet points and headlines:
+
+---
+
+### Configuring Tools in Jenkins
+
+1. **Access Tool Configuration:**
+   - Navigate to **Manage Jenkins** > **Configure System**.
+   - Under the **Tools** section, configure tools like Apache Maven, Docker, etc.
+
+2. **Configuring Apache Maven:**
+   - To configure Apache Maven (e.g., version 3.6.0):
+     1. Install the **Apache Maven Plugin**.
+     2. Once installed, Maven will appear in the **Tools** section.
+     3. Click **Add Maven** to configure Maven:
+        - **Install Automatically**: Check the box to install Maven automatically.
+        - **Version**: Select the desired version (e.g., 3.6.0).
+---
